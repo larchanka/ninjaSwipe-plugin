@@ -7,6 +7,8 @@ Plugin to detect scroll direction
 Example usage
 -----------------
 
+Jquery 1.10.0 used
+
 
     $('#ID').ninjaSwipe({
         deltaMove : 30,
@@ -14,5 +16,9 @@ Example usage
         moveLeft : movefunction,
         moveRight : movefunction,
         swipeLeft : swipefunction,
-        swipeRight : swipefunction
+        swipeRight : swipefunction,
+        moveUp : movefunction2,
+        moveDown : movefunction2,
+        swipeUp : swipefunction2,
+        swipeDown : swipefunction2
     });

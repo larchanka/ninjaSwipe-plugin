@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<title>Test example</title>
+	<script src="http://code.jquery.com/jquery-1.10.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="ninja-swipe-0.1.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="testid" style="margin:20px;background-color:black;width: 300px;height: 300px;"></div>
+	<div id="consoleid" style="margin: 20px;"></div>
+</body>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+	$('#testid').ninjaSwipe({
+        deltaMove : 30,
+        deltaSwipe : 30,
+        moveLeft : movefunction,
+        moveRight : movefunction,
+        swipeLeft : swipefunction,
+        swipeRight : swipefunction,
+        moveUp : movefunction2,
+        moveDown : movefunction2,
+        swipeUp : swipefunction2,
+        swipeDown : swipefunction2
+    });
+});
+var movefunction = function(event) {
+	document.getElementById('consoleid').innerHTML = '<b>Hor Move<b><br />'+event;
+}
+var swipefunction = function(event) {
+	document.getElementById('consoleid').innerHTML = '<b>Hor Swipe<b><br />'+event;
+}
+var movefunction2 = function(event) {
+	document.getElementById('consoleid').innerHTML = '<b>Ver Move<b><br />'+event;
+}
+var swipefunction2 = function(event) {
+	document.getElementById('consoleid').innerHTML = '<b>Ver Swipe<b><br />'+event;
+}
+</script>
+</html>

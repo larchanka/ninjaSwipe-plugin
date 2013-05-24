@@ -33,7 +33,7 @@
 		};
 		var mouseDown = false;
 		var moveDirection = ninjaSwipeConst.DIRECTION_NONE;
-
+		
 		return this.each(function() {
 			var me = $(this)
 
@@ -153,17 +153,20 @@
 
 
 			if(isPointerEvents) {
+				console.log('Pointer')
 				this.addEventListener("MSPointerDown", ninjaSwipe__touchStart, false);
 				this.addEventListener("MSPointerMove", ninjaSwipe__touchMove, false);
 				this.addEventListener("MSPointerUp", ninjaSwipe__touchEnd, false);
 				this.addEventListener("MSPointerCancel", ninjaSwipe__touchCancel, false);
 			} else {
 				if(isTouchEvents) {
+				console.log('touch')
 					this.addEventListener("touchstart", ninjaSwipe__touchStart, false);
 					this.addEventListener("touchmove", ninjaSwipe__touchMove, false);
 					this.addEventListener("touchend", ninjaSwipe__touchEnd, false);
 					this.addEventListener("touchcancel", ninjaSwipe__touchCancel, false);
 				} else {
+				console.log('mouse')
 					this.addEventListener("mousedown", ninjaSwipe__touchStart, false);
 					this.addEventListener("mousemove", ninjaSwipe__touchMove, false);
 					this.addEventListener("mouseup", ninjaSwipe__touchEnd, false);
