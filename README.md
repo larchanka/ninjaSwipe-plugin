@@ -4,7 +4,8 @@ ninjaSwipe-plugin
 Plugin to detect scroll direction
 
 
-*example usage
+Example usage
+-----------------
 
 $('#ID').ninjaSwipe({
     deltaMove : 30,
